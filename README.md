@@ -1,1 +1,9 @@
-# sbusy_api
+# Api Server SBusy
+
+## Подготовка
+
+**TODO**
+
+## Запуск
+
+**TODO**
