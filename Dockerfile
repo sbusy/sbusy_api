@@ -2,14 +2,17 @@ FROM google/dart
 
 WORKDIR /app
 
+RUN apt update
+RUN apt install certbot
+
 ADD pubspec.* /app/
 RUN pub get
 ADD . /app
 RUN pub get --offline
 
-FROM certbot/certbot
+EXPOSE 80/tcp
+EXPOSE 443/tcp
 
-EXPOSE 8000/tcp
 EXPOSE 3306/tcp
 EXPOSE 3306/tcp
 
